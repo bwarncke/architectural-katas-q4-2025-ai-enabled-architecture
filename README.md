@@ -1,0 +1,1 @@
+# architectural-katas-q4-2025-ai-enabled-architecture
