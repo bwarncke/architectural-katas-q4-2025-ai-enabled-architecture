@@ -2,10 +2,10 @@
 
 ## Team
 **Name:** Weyland-Yutani Algorithm Recovery Squad
-- Robert Patton (FA Solutions)
-- Mark Pineda (FA Solutions)
-- Michael Vaughan (FA Solutions)
-- Benjamin Warncke (Mutual of Enumclaw Insurance)
+- [Robert Patton](https://www.linkedin.com/in/rpatton/) (FA Solutions)
+- [Mark Pineda](https://www.linkedin.com/in/mark-pineda-b62b98b/) (FA Solutions)
+- [Michael Vaughan](https://www.linkedin.com/in/michael-vaughan-5a33618/) (FA Solutions)
+- [Benjamin Warncke](https://www.linkedin.com/in/benjaminwarncke/) (Mutual of Enumclaw Insurance)
 
 ## Overview of the Architecture
 TBD
