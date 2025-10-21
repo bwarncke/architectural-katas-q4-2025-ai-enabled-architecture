@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Top-Level Architecture" id="TROxGRHwthohwfCNFghT">
+    <mxGraphModel dx="1025" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-12" value="Analytics" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0000CC;strokeWidth=2;fillColor=none;verticalAlign=top;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="898" y="130" width="170" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-13" value="AI Enablement" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0000CC;strokeWidth=2;fillColor=none;verticalAlign=top;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="40" y="130" width="300" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-1" value="AI AGent&lt;br&gt;&lt;i&gt;Bedrock AgentCore&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-2" value="Monolithic App&lt;br&gt;&lt;br&gt;&lt;i&gt;Elastic Kubernetes Service&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="408" y="320" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-3" value="Transactional DB&lt;br&gt;&lt;i&gt;DynamoDB&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="408" y="432" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.846;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-6" target="tunja0gr6lBs-Br6g-3u-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-6" target="yfXjeQQ5Y2JoiUGeMslx-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-6" value="Event Bus&lt;br&gt;&lt;i&gt;EventBridge&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="639" y="453" width="169" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-7" value="Pub/Sub&lt;br&gt;&lt;i&gt;Simple Notification Service&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="666.5" y="576" width="115" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="tunja0gr6lBs-Br6g-3u-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="463" y="380" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" parent="1" source="tunja0gr6lBs-Br6g-3u-6" target="tunja0gr6lBs-Br6g-3u-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-12" value="Publish &amp;amp; Subscribe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="tunja0gr6lBs-Br6g-3u-11" vertex="1" connectable="0">
+          <mxGeometry x="-0.5714" y="1" relative="1" as="geometry">
+            <mxPoint y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-15" target="tunja0gr6lBs-Br6g-3u-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-15" value="CDN &lt;i&gt;CloudFront&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="408" y="210" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-16" value="Admin UI&lt;br&gt;&lt;i&gt;Angular SPA&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="408" y="260" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-17" value="Android App&lt;br&gt;&lt;i&gt;Kotlin&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="539" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-18" value="IOS App&lt;br&gt;&lt;i&gt;Swift&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="649" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.159;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-16" target="tunja0gr6lBs-Br6g-3u-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.603;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="584.1700000000001" y="321.98" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.885;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="694.1500000000001" y="318.98" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-26" value="Reporting&lt;br&gt;&lt;i&gt;Tableau&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="928" y="250" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-27" value="Analytical DB&lt;br&gt;&lt;i&gt;RDS PostgreSQL&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="931" y="345" width="105" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tunja0gr6lBs-Br6g-3u-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tunja0gr6lBs-Br6g-3u-26" target="tunja0gr6lBs-Br6g-3u-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1096" y="380" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-1" value="Data Streaming&lt;br&gt;&lt;i&gt;Data Firehose&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="931" y="453" width="107" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yfXjeQQ5Y2JoiUGeMslx-3" target="tunja0gr6lBs-Br6g-3u-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-3" value="Vehicle / Device&lt;div&gt;Data&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" parent="1" vertex="1">
+          <mxGeometry x="751" y="320" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-11" value="Application Logic &amp;amp; Data" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0000CC;strokeWidth=2;fillColor=none;verticalAlign=top;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="358" y="130" width="520" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="yfXjeQQ5Y2JoiUGeMslx-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="yfXjeQQ5Y2JoiUGeMslx-1" target="tunja0gr6lBs-Br6g-3u-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

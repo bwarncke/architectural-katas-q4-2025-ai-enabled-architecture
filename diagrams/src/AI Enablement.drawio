@@ -1,0 +1,16 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Top-Level AI Enablement" id="_aprzbjtJ0dY8itSqK75">
+    <mxGraphModel dx="1025" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QGQOxkhBss5Zwh8PDMx2-1" value="AI Enablement" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0000CC;strokeWidth=2;fillColor=none;verticalAlign=top;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="330" y="220" width="300" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="QGQOxkhBss5Zwh8PDMx2-2" value="AI AGent&lt;br&gt;&lt;i&gt;Bedrock AgentCore&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
