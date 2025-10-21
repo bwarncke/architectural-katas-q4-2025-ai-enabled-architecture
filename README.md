@@ -10,6 +10,11 @@
 ## Overview of the Architecture
 TBD
 
+## Architecture Decision Records
+- [Infrastructure Hosting](adr/ADR-Cloud.md)
+- [Application Architecture: Monolith or Microservices?](adr/ADR-Monolith.md)
+- [AI: Which Platform or Framework to use for Building Agents?](adr/ADR-AI-Agent.md)
+
 ## Assumptions
 - Tesla
 - Purpose-built scooters and bicycles
