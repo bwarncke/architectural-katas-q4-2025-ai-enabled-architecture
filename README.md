@@ -2,10 +2,49 @@
 
 ## Team
 **Name:** Weyland-Yutani Algorithm Recovery Squad
-- [Robert Patton](https://www.linkedin.com/in/rpatton/) (FA Solutions)
-- [Mark Pineda](https://www.linkedin.com/in/mark-pineda-b62b98b/) (FA Solutions)
-- [Michael Vaughan](https://www.linkedin.com/in/michael-vaughan-5a33618/) (FA Solutions)
-- [Benjamin Warncke](https://www.linkedin.com/in/benjaminwarncke/) (Mutual of Enumclaw Insurance)
+- [Robert Patton](https://www.linkedin.com/in/rpatton/) (FA Solutions, Lead Architect)
+- [Mark Pineda](https://www.linkedin.com/in/mark-pineda-b62b98b/) (FA Solutions, Sr. Software Engineer)
+- [Michael Vaughan](https://www.linkedin.com/in/michael-vaughan-5a33618/) (FA Solutions, DevOps Engineer)
+- [Benjamin Warncke](https://www.linkedin.com/in/benjaminwarncke/) (Mutual of Enumclaw Insurance, Sr. Software Engineer)
+
+[Link to this Submission Repository](https://github.com/bwarncke/architectural-katas-q4-2025-ai-enabled-architecture)
+
+## Background
+The **MobilityCorp** company provides short term rentals for last mile transport, 
+offering a selection of electric scooters, bikes, cars and vans which 
+are paid for by the minute. MobilityCorp has been in operation through Europe
+but has not seen the usage and market growth desired, leading to an effort
+to build new systems in support of that growth. A specific goal of the new
+architecture is to safely use artificial intelligence to enhance the services
+and address customer complaints with the existing offering. A brief outline of
+the service offerings is followed by the feedback from customers.
+
+### Key Elements of the Service Offerings
+- This is a service for renting vehicles, much like other companies in the space with one slight difference in that scooters and bikes are available as well as cars. This combines what are typically services from different companies.
+- There is an emphasis on enabling a better experience for the customer as well as better efficiency for MobilityCorp via systems intelligence. While this is likely true of every company, for us the company seems to be funded for and desire a complete rebuild and new approach.
+- Customers are billed by the minute for any rental. All rentals have an associated timeline, for cars and vans it is the agreed upon rental period, for scooters and bikes it is a max rental period of 12 hours. 
+- Rentals must be returned to designated locations. Any vehicle which is not returned to such a location by the end of the rental period or max duration are considered to be late and will incur additional fees above the per minute cost.
+- Any issues with the rental vehicle will be corrected by MobilityCorp in various ways dependent on the severity.
+
+### Customer Complaints to Address
+- **C1:** Vehicles are not where they are supposed to be at pickup
+- **C2:** Vehicles are dirty or need maintenance when they are picked up for use by customers
+- **C3:** Vehicles are not fully charged at pickup
+- **C4:** Customers are not relying on the service for regular travel
+
+### Elements Targeted for Greater Efficiency
+- **E1:** Reduce the time from vehicle return to vehicle available for rental
+- **E2:** Improve inventory balancing, for example accounting for greater demand in certain areas at certain times
+- **E3:** Improve occupancy rate for the fleet
+- **E4:** Decrease the percentage of the fleet incurring late fees and not returning vehicles to designated locations
+
+### Architecture Challenges
+In most respects the system(s) for MobilityCorp will be like any other modern system. Browser and native mobile apps, 
+OLTP and OLAP data stores, event-driven architecture where possible, cloud / infrastructure as a service etc.
+There are a few areas where extra care is needed and this must be addressed in the architecture:
+- **A1:** Respect customer privacy with our vehicle and usage tracking
+- **A2:** Expect instability in the AI tech space
+- TBD
 
 ## Overview of the Architecture
 TBD
@@ -14,10 +53,6 @@ Diagram
 ![Top-Level Architecture Diagram](diagrams/top-level-architecture.png)
 
 ## Current Challenges and Proposed Solutions
-- **C1:** Vehicles are not where they are supposed to be at pickup
-- **C2:** Vehicles are dirty or need maintenance when they are picked up for use by customers
-- **C3:** Vehicles are not fully charged at pickup
-- **C4:** Customers are not relying on the service for regular travel 
 
 ### C1: Vehicles are not where they are supposed to be at pickup
 TBD
