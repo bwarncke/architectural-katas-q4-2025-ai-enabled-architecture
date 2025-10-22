@@ -16,7 +16,7 @@ Diagram
 ## Current Challenges and Proposed Solutions
 - **C1:** Vehicles are not where they are supposed to be at pickup
 - **C2:** Vehicles are dirty or need maintenance when they are picked up for use by customers
-- **C3:** Vahicles are not fully charged at pickup
+- **C3:** Vehicles are not fully charged at pickup
 - **C4:** Customers are not relying on the service for regular travel 
 
 ### C1: Vehicles are not where they are supposed to be at pickup
@@ -25,7 +25,7 @@ TBD
 ### C2: Vehicles are dirty or need maintenance when they are picked up for use by customers
 TBD
 
-### C3: Vahicles are not fully charged at pickup
+### C3: Vehicles are not fully charged at pickup
 TBD
 
 ### C4: Customers are not relying on the service for regular travel
