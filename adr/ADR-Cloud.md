@@ -16,9 +16,10 @@ Chosen option: "Hosting in AWS", because the startup costs are lower compared wi
 as well as the availability of platform as a service for several key needs. This also translates to getting up and running faster. 
 Between the cloud options, we selected AWS versus Azure for the highly opinionated reason that our whole team would be 
 happy if we never have to use Azure again in our careers. We could cite reasons for this at length but the gist of it is that in our
-experience AWS is a far superior provider, having used both extensively.
+experience AWS is a far superior provider, having used both extensively. While this may not seem like a sound reason, 
+sometimes it is important to just document that an option was chosen for subjective reasons versus objective.
 
-<!-- This is an optional element. Feel free to remove. -->
+
 ### Consequences
 
 * Good, because we gain speed on building out the infrastructure.

@@ -44,12 +44,18 @@ OLTP and OLAP data stores, event-driven architecture where possible, cloud / inf
 There are a few areas where extra care is needed and this must be addressed in the architecture:
 - **A1:** Respect customer privacy with our vehicle and usage tracking
 - **A2:** Expect instability in the AI tech space
-- TBD
+- **A3:** How will we validate the results of logic using AI?
 
 ## Overview of the Architecture
-TBD
+The new system, "*Hermes*", has the critical components depicted in the [diagram](#diagram-of-the-hermes-top-level-architecture) below. Where applicable we have shown
+both a component name or tag as well as a technology we intend to use to support the element. Decisions which seem
+like they may be debatable are covered in the following section for [Architecture Decision Records](#architecture-decision-records).
 
-Diagram
+Starting in the Application Logic and Data boundary we have a browser-based UI for internal use by operations 
+and administrators and native mobile apps for customers on both Android and iOS. These UIs call into the business logic 
+and processes running in a monolithic application deployed on Kubernetes
+
+### Diagram of the Hermes Top-Level Architecture
 ![Top-Level Architecture Diagram](diagrams/top-level-architecture.png)
 
 ## Current Challenges and Proposed Solutions
