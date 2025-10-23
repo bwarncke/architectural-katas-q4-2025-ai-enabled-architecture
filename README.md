@@ -24,7 +24,7 @@ the service offerings is followed by the feedback from customers.
 - There is an emphasis on enabling a better experience for the customer as well as better efficiency for MobilityCorp via systems intelligence. While this is likely true of every company, for us the company seems to be funded for and desire a complete rebuild and new approach.
 - Customers are billed by the minute for any rental. All rentals have an associated timeline, for cars and vans it is the agreed upon rental period, for scooters and bikes it is a max rental period of 12 hours. 
 - Rentals must be returned to designated locations. Any vehicle which is not returned to such a location by the end of the rental period or max duration are considered to be late and will incur additional fees above the per minute cost.
-- Any issues with the rental vehicle will be corrected by MobilityCorp in various ways dependent on the severity.
+- Any issues with the rental vehicle will be corrected by MobilityCorp in various ways depending on the severity.
 
 ### Customer Complaints to Address
 - **C1:** Vehicles are not where they are supposed to be at pickup
@@ -46,14 +46,36 @@ There are a few areas where extra care is needed and this must be addressed in t
 - **A2:** Expect instability in the AI tech space
 - **A3:** How will we validate the results of logic using AI?
 
-## Overview of the Architecture
-The new system, "*Hermes*", has the critical components depicted in the [diagram](#diagram-of-the-hermes-top-level-architecture) below. Where applicable we have shown
+## Overview of the Hermes Architecture
+The new system, "*Hermes*", has the critical technology components depicted in the [diagram](#diagram-of-the-hermes-top-level-architecture) below. Where applicable we have shown
 both a component name or tag as well as a technology we intend to use to support the element. Decisions which seem
-like they may be debatable are covered in the following section for [Architecture Decision Records](#architecture-decision-records).
+like they may be debatable are covered in the following section for [Architecture Decision Records](#architecture-decision-records). The
+architecture has 3 key areas, to be described individually below.
 
-Starting in the Application Logic and Data boundary we have a browser-based UI for internal use by operations 
-and administrators and native mobile apps for customers on both Android and iOS. These UIs call into the business logic 
-and processes running in a monolithic application deployed on Kubernetes
+The architecture relies upon running in the AWS public cloud ([ADR](adr/ADR-Cloud.md)). Starting in the Application Logic and Data boundary we have a browser-based UI for internal use by operations 
+and administrators and native mobile apps for customers and mobile support team on both Android and iOS. These UIs call into the business logic 
+and processes running in a monolithic application deployed on the [Elastic Kubernetes Service](https://aws.amazon.com/pm/eks/). Transactional data is stored in a NoSQL DB 
+provided by the [DynamoDB](https://aws.amazon.com/dynamodb) service. 
+
+The monolithic application logic emits events to an event bus hosted in the [EventBridge](https://aws.amazon.com/eventbridge/) service, which uses pub/sub
+topics to make the events available to subscribers. Device data from the vehicles and mobile apps is also sent through
+EventBridge. Logic which is asynchronous in nature or not user-triggered directly is orchestrated by EventBridge in the 
+pattern of Event X takes place, logic X and Z needs to be triggered. EventBridge receives event X, then makes calls
+X and Z to endpoints in the application code. 
+
+Some important points about the application architecture: REST is used for UI-facing endpoints, while gRPC is used for internal and 
+event processing logic to call into the application. [Istio](https://istio.io/) is <ins>tentatively</ins> selected for the service mesh, pending evaluation.
+
+The analytics environment is important to include at this level because it is crucial to understanding what is working 
+and not working in terms of addressing customer complaints to drive market growth. It is also an important data source 
+for the AI-enabled decisions which make up the third element of the architecture. A star schema will be modeled in 
+conjunction with the application's relational schema, and will reside in PostgreSQL (until growth warrants a change to
+a higher cost solution such as RedShift or SnowFlake). The data pipelines to get into the analytics store are handled 
+primarily by a handoff from EventBridge to [Data Firehose](https://aws.amazon.com/firehose/) and Firehose triggering 
+data loads (very small ones, this is event-based primarily) into the analytics store. Tableau is to be used for
+reporting and visualization, this is one of the areas we feel it worth it to invest in a more expensive product.
+
+
 
 ### Diagram of the Hermes Top-Level Architecture
 ![Top-Level Architecture Diagram](diagrams/top-level-architecture.png)
@@ -88,6 +110,13 @@ TBD
 - Pricing Algorithm
 - Predictive inventory usage
 - Return and damage analysis
+
+## Cloud Infrastructure
+Cloud infrastructure ([ADR](adr/ADR-Cloud.md)) will be provisioned in AWS via Cloudformation using 
+the least access security model while incorporating multiple availability zones for redundancy and 
+using Cloudwatch to monitor for changes and events. GitHub will be used to version Infrastructure 
+templates and the templates will be tested on temporary AWS accounts created for the duration 
+of testing.
 
 ## Parking Lot / Ideas for the Future
 Some ideas we discussed were discarded for now because of time constraints or 

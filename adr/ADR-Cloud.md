@@ -1,18 +1,18 @@
 # Infrastructure Hosting
 
 ## Context and Problem Statement
-
+We need to run the application and host the corresponding data somewhere.
 Should we use a cloud provider and if so, which one?
 
 ## Considered Options
 
-* Hosting the applications in our own data center or an outsourced data center 
+* Hosting the applications in an outsourced data center using a managed service provider
 * Hosting in AWS
 * Hosting in Azure
 
 ## Decision Outcome
 
-Chosen option: "Hosting in AWS", because the startup costs are lower compared with typical 3 year leasing and data center build out costs 
+Chosen option: "Hosting in AWS", because the startup costs for running in the public cloud are lower compared with typical 3 year leasing and data center build out costs 
 as well as the availability of platform as a service for several key needs. This also translates to getting up and running faster. 
 Between the cloud options, we selected AWS versus Azure for the highly opinionated reason that our whole team would be 
 happy if we never have to use Azure again in our careers. We could cite reasons for this at length but the gist of it is that in our
@@ -29,3 +29,6 @@ sometimes it is important to just document that an option was chosen for subject
 * Bad, because the capitalization model with the cloud is less favorable (if it is even capitalized,
   depending on where we operate and whether GAAP is in use)
 * Bad, to a small degree, because we almost certainly introduce vendor lock-in by using tech which we can't take elsewhere as-is
+
+### Nota Bene
+* We are not considering or describing a plan for managing costs during the build-out period where we are maintaining the existing system and infra while also paying for the new system and infra. This is out of scope due to time constraints but would be part of a more detailed architecture plan if the initial plan is approved
