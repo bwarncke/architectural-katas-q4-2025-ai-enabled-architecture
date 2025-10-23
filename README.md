@@ -1,7 +1,7 @@
 # O'Reilly Architectural Katas Q4 2025: AI Enabled Architecture
 
 ## Hermes System Architecture
-![System Graphic](assets/hermes.png)
+![System Graphic](assets/hermes_graphic.png)
 ## Team
 **Name:** Weyland-Yutani Algorithm Recovery Squad
 - [Robert Patton](https://www.linkedin.com/in/rpatton/) (FA Solutions, Lead Architect)
