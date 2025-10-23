@@ -1,5 +1,7 @@
 # O'Reilly Architectural Katas Q4 2025: AI Enabled Architecture
 
+## Hermes System Architecture
+![System Graphic](assets/hermes.png)
 ## Team
 **Name:** Weyland-Yutani Algorithm Recovery Squad
 - [Robert Patton](https://www.linkedin.com/in/rpatton/) (FA Solutions, Lead Architect)
@@ -46,7 +48,7 @@ There are a few areas where extra care is needed and this must be addressed in t
 - **A2:** Expect instability in the AI tech space
 - **A3:** How will we validate the results of logic using AI?
 
-## Overview of the Hermes Architecture
+## Overview of the Hermes Systems Architecture
 The new system, "*Hermes*", has the critical technology components depicted in the [diagram](#diagram-of-the-hermes-top-level-architecture) below. Where applicable we have shown
 both a component name or tag as well as a technology we intend to use to support the element. Decisions which seem
 like they may be debatable are covered in the following section for [Architecture Decision Records](#architecture-decision-records). The
@@ -80,7 +82,17 @@ reporting and visualization, this is one of the areas we feel it worth it to inv
 ### Diagram of the Hermes Top-Level Architecture
 ![Top-Level Architecture Diagram](diagrams/top-level-architecture.png)
 
-## Current Challenges and Proposed Solutions
+## Key Elements of the Device Communications Architecture
+* The cellular network will be used to transmit all communications from the vehicle back to the Hermes systems, this transmission capability will be added in to the fleet's vehicles
+* LTE-FDD bands 7 and 28 will be used for the broadest coverage possible 
+* All vehicles have GPS receivers built in and location data will be transmitted home
+* GPS is unidirectional, the cell signal is required in order to receive data and in the event that there is no signal the onboard cellular transmission device will record and store location data to be transmitted once signal resumes. 
+* Any vehicle which remains out of signal range for a configurable amount of time will be flagged for review with the intent to build data around areas with consistent lack of  service and determine whether such areas should be permitted
+* All diagnostic information evailable from the cars and vans will be transmitted home
+* Scooters and bikes will have battery status data sent home via the customer transmitter
+
+
+## How does the Architecture Meet the Customer Complaints?
 
 ### C1: Vehicles are not where they are supposed to be at pickup
 TBD
@@ -123,6 +135,7 @@ Some ideas we discussed were discarded for now because of time constraints or
 outside forces such as regulations. This section very briefly covers those ideas so they are
 not lost as the company grows and the legal and regulatory environment changes.
 
-- Use of autonomous vehicles for inventory management
-- Loss prevention
-- Criminal usage detection
+* Use of autonomous vehicles for inventory management
+* Loss prevention
+* Criminal usage detection
+* Use of satellite communications instead of cellular networks if we see consistent use while out of service
