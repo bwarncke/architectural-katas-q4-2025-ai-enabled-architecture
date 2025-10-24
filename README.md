@@ -144,9 +144,9 @@ least usage and a large market.
 - At-worst intermittent cellular connectivity
 
 ## AI Enablement
-- Pricing Algorithm
-- Predictive inventory usage
-- Return and damage analysis
+- Pricing Algorithm - encourage improving occupancy rate via discounts, use discounts to incentivize particular return locations. The basics here are to treat this more like a hotel and not at all like Uber. We will discount to reward behavior, but not have upwards price fluctuations because we don't believe that incentivizes much of anything in our business model
+- Predictive inventory usage - pull data from event ticketing, transportation hubs, weather, and news outlets to predict demand spikes or decreases in areas. 
+- Return and damage analysis - basic automation via agents 
 
 ## Cloud Infrastructure
 Cloud infrastructure ([ADR](adr/ADR-Cloud.md)) will be provisioned in AWS via Cloudformation using 
@@ -167,7 +167,8 @@ not lost as the company grows and the legal and regulatory environment changes.
 
 ## Final Thoughts
 This submission is very much a first draft or pass at an architecture, with important areas left to be filled in and a 
-more casual tone than we would leave in for a finished product. 
+more casual tone than we would leave in for a finished product. Unfortunately, while most of our conversation and debates
+were on the topic of AI usage, we barely started documenting the thoughts since we did the basic elements first.
 The team has been pulled away due to production issues (AWS outage anyone? Sure, we'll take another) and in some cases
 pulled off entirely. We hope to fill in more if we are selected to proceed to the next phase but for now this will have 
 to do.
