@@ -166,7 +166,8 @@ not lost as the company grows and the legal and regulatory environment changes.
 * Use of satellite communications instead of cellular networks if we see consistent use while out of service
 
 ## Final Thoughts
-This submission is very much a first draft or pass at an architecture, with important areas left to be filled in. 
+This submission is very much a first draft or pass at an architecture, with important areas left to be filled in and a 
+more casual tone than we would leave in for a finished product. 
 The team has been pulled away due to production issues (AWS outage anyone? Sure, we'll take another) and in some cases
 pulled off entirely. We hope to fill in more if we are selected to proceed to the next phase but for now this will have 
 to do.

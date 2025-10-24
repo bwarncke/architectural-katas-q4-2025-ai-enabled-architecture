@@ -10,17 +10,18 @@ expand it over time or deal with self-service are out of scope due to time const
 
 * No data pipelines; replication of OLTP data to an operational data store is enough and we get rolling with the resulting limited reporting capabilities
 * Traditional ETL from OLTP + unstructured data to a star schema
-* Traditional ETL from OLTP to star schema + unstructured to S3 and a mix of RedShift 
-* {title of option 3}
-* … <!-- numbers of options can vary -->
+* Traditional ETL from OLTP to star schema + unstructured to S3 with RedShift providing data lakehouse functionality over it
+* OLTP data to star schema via Data Firehose, S3 and Glue (or similar)
 
 ## Decision Outcome
 
-Chosen option: "{title of option 1}", because {justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+Chosen option: "OLTP data to star schema via Data Firehose, S3 and Glue (or similar)", because 
+it provides near real-time data and meets expected initial needs while allowing for sophistication to
+be added later without significant rework. For example, we can start with this then later to the architecture
+to support ingestion of unstructured data without having to redo what we built for the structured data.
 
-<!-- This is an optional element. Feel free to remove. -->
 ### Consequences
 
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
+* Good, because it provides nearly up to data information to downstream consumers
+* Good, because it can be matured
+* Bad, because it relies on nearly every developer to send data out to EventBridge to be fed into Data Firehose, this can be easily forgotten or not maintained (though that causes other critical problems for the event driven elements of the architecture)

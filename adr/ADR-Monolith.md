@@ -1,23 +1,21 @@
 # Application Architecture: Monolith or Microservices?
 
 ## Context and Problem Statement
-
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+Should the application architecture be monolithic or microservice-based?
 
 ## Considered Options
 
-* {title of option 1}
-* {title of option 2}
-* {title of option 3}
-* … <!-- numbers of options can vary -->
+* Monolith
+* Microservices
 
 ## Decision Outcome
 
-Chosen option: "{title of option 1}", because {justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+Chosen option: "Monolith", because we do not think enough has been learned about the business domain from the legacy 
+to usefully break it down into microservices. At the same time, our focus is on dramatic improvements to process and logic
+in the area of AI and we do not want to convert to microservices while such changes are ongoing. 
 
-<!-- This is an optional element. Feel free to remove. -->
 ### Consequences
 
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
+* Good, because we limit the scope of change in the architecture in a significant way
+* Bad, because we do not generally gain the benefits of serverless/as needed technology at the app tier, such as Lambda. 
+* Even Trade: we gain the headaches of dealing with Kubernetes while avoiding the headaches of dealing with Lambda.
