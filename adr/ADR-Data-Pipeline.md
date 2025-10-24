@@ -1,13 +1,16 @@
 # Analytics: Tooling for the Data Pipeline
 
 ## Context and Problem Statement
-
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+There are many ways to load OLTP data into an analytics data store, which do we propose using? This is not an area we 
+feel the need to spend a lot of money on, but we do want to avoid problems we have seen before such as stale data. 
+Discussion of formalizing the source of truth for data, and even a basic dimensional model of data and how we would 
+expand it over time or deal with self-service are out of scope due to time constraints.
 
 ## Considered Options
 
-* {title of option 1}
-* {title of option 2}
+* No data pipelines; replication of OLTP data to an operational data store is enough and we get rolling with the resulting limited reporting capabilities
+* Traditional ETL from OLTP + unstructured data to a star schema
+* Traditional ETL from OLTP to star schema + unstructured to S3 and a mix of RedShift 
 * {title of option 3}
 * … <!-- numbers of options can vary -->
 
