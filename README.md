@@ -134,12 +134,12 @@ least usage and a large market.
 ## Architecture Decision Records
 - [Infrastructure Hosting](adr/ADR-Cloud.md)
 - [Application Architecture: Monolith or Microservices?](adr/ADR-Monolith.md)
-- [AI: Which Platform or Framework to use for Building Agents?](adr/ADR-AI-Agent.md)
+-  TBD: AI: Which Platform or Framework to use for Building Agents?
 - [Analytics: Tooling for the Data Pipeline](adr/ADR-Data-Pipeline.md)
 
 ## Assumptions
-- Tesla
-- Purpose-built scooters and bicycles
+- Tesla? for the built in APIs
+- Off the shelf scooters and bicycles modified with our transmitters
 - GPS connectivity
 - At-worst intermittent cellular connectivity
 
@@ -160,9 +160,9 @@ Some ideas we discussed were discarded for now because of time constraints or
 outside forces such as regulations. This section very briefly covers those ideas so they are
 not lost as the company grows and the legal and regulatory environment changes.
 
-* Use of autonomous vehicles for inventory management
+* Use of autonomous vehicles for inventory management as the regulatory environment supports that across Europe
 * Loss prevention
-* Criminal usage detection
+* Criminal usage detection: kidnapping, robbery, etc.
 * Use of satellite communications instead of cellular networks if we see consistent use while out of service
 
 ## Final Thoughts
