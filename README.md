@@ -93,7 +93,7 @@ for the individual vehicles.
 * The cellular network will be used to transmit all communications from the vehicle back to the Hermes systems, this transmission capability will be added in to the fleet's vehicles
 * LTE-FDD bands 7 and 28 will be used for the broadest coverage possible 
 * All vehicles have GPS receivers built in and location data will be transmitted home
-* GPS is unidirectional, the cell signal is required in order to receive data and in the event that there is no signal the onboard cellular transmission device will record and store location data to be transmitted once signal resumes. 
+* GPS is unidirectional, the cell signal is required in order to transmit and receive data. In the event that there is no signal the onboard cellular transmission device will record and store location data to be transmitted once signal resumes. 
 * Any vehicle which remains out of signal range for a configurable amount of time will be flagged for review with the intent to build data around areas with consistent lack of  service and determine whether such areas should be permitted
 * All diagnostic information available from the cars and vans will be transmitted home
 * Scooters and bikes will have battery status data sent home via the customer transmitter
